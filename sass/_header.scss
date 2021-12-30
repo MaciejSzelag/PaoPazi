@@ -1,0 +1,118 @@
+header {
+    width: 100%;
+    height: 100vh;
+
+    .front-page {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .bg-absolute,
+        .cover {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg-absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(../images/flower_1920.jpg);
+            background-position: center left;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .cover {
+            @include flex-center-jc-end-column;
+            background-color: rgba(124, 68, 0, 0.37);
+            padding-bottom: 6rem;
+
+            h1,
+            h2 {
+                padding: 1rem;
+                color: rgb(231, 231, 231);
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 6vh;
+                font-family: 'Love Light', cursive;
+
+                span {
+                    color: $color_a;
+                }
+            }
+
+            h2 {
+                padding: 10px;
+                font-size: 2rem;
+                font-weight: 300;
+            }
+
+            .line {
+                margin: 40px 0;
+                width: 50%;
+                height: 2px;
+                background-color: $color_a;
+            }
+        }
+    }
+}
+
+@media (min-width: 321px) {
+    header {
+
+        .front-page {
+
+            .cover {
+
+
+
+
+                h1 {
+                    font-size: 10vh
+                }
+
+                h2 {
+                    font-size: 3vh;
+
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    header {
+
+        .front-page {
+
+            .cover {
+                @include flex-center-ai-end-column;
+                padding-right: 10rem;
+                padding-bottom: 0;
+
+
+                h1 {
+                    font-size: 12rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    width: 70rem;
+                }
+
+                .line {
+
+                    width: 40%;
+                    height: 3px;
+
+                }
+            }
+        }
+    }
+}
