@@ -5,19 +5,23 @@ main {
 
     article {
         @include flex-center-column;
-        max-width: 192rem;
         height: 100%;
+        scroll-snap-align: start;
 
         section {
             @include flex-center-column;
             width: 100%;
             height: 100%;
+            scroll-snap-type: both mandatory;
+
+
 
             .content {
                 @include flex-center-column;
                 width: 100%;
                 height: auto;
                 padding: 4rem 0;
+
 
                 h1 {
                     font-size: 5vh;
@@ -31,7 +35,7 @@ main {
                 }
 
                 h4 {
-                    margin: 1rem 0 0;
+                    margin: 1rem 0 4rem;
                     font-size: 2vh;
                     color: rgb(78, 78, 78);
                     font-weight: 100;
@@ -41,7 +45,7 @@ main {
                 .gallery,
                 .list {
                     @include flex-center-column;
-                    max-width: 144rem;
+                    // max-width: 144rem;
                     height: auto;
                 }
 
@@ -64,7 +68,25 @@ main {
                                 text-align: center;
                                 color: white;
                                 text-decoration: none;
+                                transition: .2s linear;
+
+                                i {
+                                    margin-right: 1.5rem;
+
+                                    transition: .2s linear;
+                                }
                             }
+                        }
+
+                        .l-con {
+                            a {
+                                color: black;
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .no-style {
+                            list-style: none;
                         }
                     }
                 }
@@ -79,7 +101,6 @@ main {
                         .img-box {
                             width: 100%;
                             min-height: 40vh;
-                            // background-color: $color_a;
 
                             img {
                                 width: 100%;
@@ -112,7 +133,6 @@ main {
                 .line-white {
                     background-color: white;
                 }
-
             }
 
             .h-8 {
@@ -123,8 +143,335 @@ main {
                 background-color: $color_a;
                 color: white;
             }
+        }
+    }
+}
 
-            ;
+@media(min-width:769px) {
+    main {
+        article {
+            section {
+                .content {
+
+                    h1 {
+                        font-size: 6vh;
+                    }
+
+                    h4 {
+                        font-size: 3vh;
+                    }
+
+                    .text,
+                    .gallery {
+                        // @include flex-center-column;
+                        max-width: 80%;
+
+                    }
+
+                    .list {
+                        ul {
+                            li {
+
+                                margin: 2rem;
+
+
+                                a {
+                                    padding: 1rem 2rem;
+                                    // font-size: 3vh;
+
+
+                                    i {
+                                        margin-right: 1.5rem;
+
+                                        transition: .2s linear;
+                                    }
+                                }
+                            }
+
+
+
+                            // .l-con:hover {
+                            //     a {
+                            //         color: rgb(189, 189, 189)
+                            //     }
+
+                            //     a[id=instagram] {
+                            //         i {
+                            //             color: rgb(253, 49, 134)
+                            //         }
+                            //     }
+
+                            //     a[id=facebook] {
+                            //         i {
+                            //             color: rgb(49, 154, 253)
+                            //         }
+                            //     }
+
+                            //     a[id=phone],
+                            //     a[id=email] {
+                            //         i {
+                            //             color: $color_a;
+                            //         }
+                            //     }
+                            // }
+
+                            .no-style {
+                                list-style: none;
+                            }
+                        }
+                    }
+
+                    .gallery {
+                        .img-group {
+                            @include flex-center-row;
+                            // width: 100%;
+                            flex-wrap: wrap;
+
+
+
+
+
+                            .img-box {
+                                width: 45%;
+                                min-height: 40vh;
+                                margin: 1rem;
+
+
+                                img {
+                                    width: 100%;
+                                    border-radius: 10px;
+                                    box-shadow: 0 0 1rem .1rem rgb(158, 158, 158);
+                                }
+                            }
+                        }
+                    }
+
+                    .text {
+                        .text-in {
+                            p {
+                                font-size: 3vh;
+                            }
+                        }
+                    }
+
+                    .line {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1025px) {
+    main {
+        article {
+            section {
+                .content {
+
+                    .text,
+                    .gallery {
+                        max-width: 90%;
+                    }
+
+                    .list {
+                        ul {
+                            .l-con {
+                                a {
+                                    font-size: 2.5vh;
+                                }
+                            }
+
+                            .l-con:hover {
+                                a {
+                                    color: rgb(189, 189, 189)
+                                }
+
+                                a[id=instagram] {
+                                    i {
+                                        color: rgb(253, 49, 134)
+                                    }
+                                }
+
+                                a[id=facebook] {
+                                    i {
+                                        color: rgb(49, 154, 253)
+                                    }
+                                }
+
+                                a[id=phone],
+                                a[id=email] {
+                                    i {
+                                        color: $color_a;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+                    .gallery {
+                        .img-group {
+                            @include flex-center-row;
+                            // width: 100%;
+                            flex-wrap: wrap;
+
+
+
+
+
+                            .img-box {
+                                @include flex-center;
+                                width: 40rem;
+                                border: 2px solid $color_a;
+                                padding: 2rem;
+                                border-radius: 5px;
+                                margin-bottom: 2rem;
+
+
+                                img {
+                                    border-radius: 5px;
+                                    transition: 1s cubic-bezier(.06, .61, .22, .68);
+                                }
+                            }
+
+                            .img-box:hover {
+
+
+
+                                img {
+                                    box-shadow: 0 0 1rem .2rem $color_a;
+                                    transform: scale(1.1);
+
+                                }
+                            }
+                        }
+                    }
+
+                    .text {
+                        .text-in {
+
+                            max-width: 120rem;
+
+                            p {
+                                font-size: 3vh;
+                            }
+                        }
+                    }
+
+                    .line {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1920px) {
+    main {
+        article {
+            section {
+                max-width: 192rem;
+
+                .content {
+
+                    .text,
+                    .gallery {
+                        max-width: 100%;
+                    }
+
+                    .list {
+                        ul {
+                            .l-con {
+                                a {
+                                    font-size: 2.5vh;
+                                }
+                            }
+
+                            .l-con:hover {
+                                a {
+                                    color: rgb(189, 189, 189)
+                                }
+
+                                a[id=instagram] {
+                                    i {
+                                        color: rgb(253, 49, 134)
+                                    }
+                                }
+
+                                a[id=facebook] {
+                                    i {
+                                        color: rgb(49, 154, 253)
+                                    }
+                                }
+
+                                a[id=phone],
+                                a[id=email] {
+                                    i {
+                                        color: $color_a;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+                    .gallery {
+                        .img-group {
+                            @include flex-center-row;
+                            // width: 100%;
+                            flex-wrap: wrap;
+
+
+
+
+
+                            .img-box {
+                                @include flex-center;
+                                width: 40rem;
+                                border: 2px solid $color_a;
+                                padding: 2rem;
+                                border-radius: 5px;
+                                margin-bottom: 2rem;
+
+
+                                img {
+                                    border-radius: 5px;
+                                    transition: 1s cubic-bezier(.06, .61, .22, .68);
+                                }
+                            }
+
+                            .img-box:hover {
+
+
+
+                                img {
+                                    box-shadow: 0 0 1rem .2rem $color_a;
+                                    transform: scale(1.1);
+
+                                }
+                            }
+                        }
+                    }
+
+                    .text {
+                        .text-in {
+
+
+                            p {
+                                font-size: 3vh;
+                            }
+                        }
+                    }
+
+                    .line {
+                        width: 20%;
+                    }
+                }
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php $page_title; echo $page_title; ?></title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
     <?php include "nav.php"; ?>

@@ -8,9 +8,9 @@
     <main>
         <article>
             <section>
-                <div class="content h-8">
-                    <h1>Piekne Paznokcie</h1>
-                    <div class="line"></div>
+                <div class="content h-8 color-orange">
+                    <h1 class="h1-white">Piekne Paznokcie</h1>
+                    <div class="line line-white"></div>
                     <div class="text">
                        <div class="text-in">
                             <p>
@@ -28,8 +28,9 @@
             <section>
                 <div class="content h-8">
                     <h1>Galeria</h1>
-                    <h4>Moje ostatnie realizacje</h4>
                     <div class="line"></div>
+                    <h4><i>Moje ostatnie realizacje</i></h4>
+                  
                     <div class="gallery">
                         <div class="img-group">
                             <div class="img-box">
@@ -50,6 +51,7 @@
                             <div class="img-box">
                                 <img src="images/Galery/Pantera_rednails_mani.jpg" alt="">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -85,6 +87,23 @@
                             <li><a href="">Pielegnacja dloni manicure</a></li>
                             <li><a href="">Pielegnacja dloni pedicure</a></li>
                             <li><a href="">Stylizacja rzes</a></li>
+                        </ul>
+                    </div>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <div class="content ">
+                    <h1>Contact</h1>
+                    <div class="line"></div>
+                    <div class="text">
+                    <div class="list ">
+                        <ul>
+                            <li class="no-style l-con"><a href="" id="phone"><i class="fas fa-mobile-alt"></i>+44 7877320658</a></li>
+                            <li class="no-style l-con"><a href="" id="email"><i class="far fa-envelope"></i>paopaziandlash@gmail.com</a></li>
+                            <li class="no-style l-con"><a href="" id="instagram"><i class="fab fa-instagram"></i>Instagram</a></li>
+                            <li class="no-style l-con"><a href="" id="facebook"><i class="fab fa-facebook-square"></i>facebook</a></li>
                         </ul>
                     </div>
                     </div>
