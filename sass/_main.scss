@@ -7,7 +7,26 @@
 html {
     font-size: 10px;
     font-family: 'Sarabun', sans-serif;
-    
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(189, 142, 105);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color_a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 208, 52);
 }
 
 .main-page-wrap {

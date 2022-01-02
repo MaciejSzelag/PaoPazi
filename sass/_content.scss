@@ -13,8 +13,7 @@ main {
             width: 100%;
             height: 100%;
             scroll-snap-type: both mandatory;
-
-
+            overflow: hidden;
 
             .content {
                 @include flex-center-column;
@@ -45,7 +44,6 @@ main {
                 .gallery,
                 .list {
                     @include flex-center-column;
-                    // max-width: 144rem;
                     height: auto;
                 }
 
@@ -96,7 +94,7 @@ main {
                         @include flex-center-column;
                         width: 100%;
                         height: auto;
-                        overflow: hidden;
+                        // overflow: hidden;
 
                         .img-box {
                             width: 100%;
@@ -119,6 +117,15 @@ main {
                             font-size: 3vh;
                             text-align: center;
                             margin-bottom: 3rem;
+
+                            .bigger {
+                                font-size: calc(3vh + .5px);
+                                font-family: 'Love Light', cursive;
+
+                                .bold-color {
+                                    color: $color_a;
+                                }
+                            }
                         }
                     }
                 }
@@ -139,9 +146,13 @@ main {
                 min-height: 80vh;
             }
 
-            .color-orange {
+            .color-a {
                 background-color: $color_a;
                 color: white;
+            }
+
+            .color-b {
+                background-color: rgba(235, 235, 235, 0.178);
             }
         }
     }
@@ -222,6 +233,8 @@ main {
                     }
 
                     .gallery {
+                        padding: 8rem;
+
                         .img-group {
                             @include flex-center-row;
                             // width: 100%;
@@ -312,6 +325,8 @@ main {
                     }
 
                     .gallery {
+                        width: 80%;
+
                         .img-group {
                             @include flex-center-row;
                             // width: 100%;
@@ -324,26 +339,28 @@ main {
                             .img-box {
                                 @include flex-center;
                                 width: 40rem;
-                                border: 2px solid $color_a;
+                                // border: 2px solid $color_a;
+                                border: 1px solid rgba(128, 128, 128, 0.555);
                                 padding: 2rem;
                                 border-radius: 5px;
                                 margin-bottom: 2rem;
-
+                                transition: .5s linear;
+                                z-index: 2;
+                                overflow: hidden;
 
                                 img {
                                     border-radius: 5px;
-                                    transition: 1s cubic-bezier(.06, .61, .22, .68);
+                                    transition: 1s linear;
                                 }
                             }
 
                             .img-box:hover {
+                                border-color: rgba(128, 128, 128, 0);
 
 
 
                                 img {
-                                    box-shadow: 0 0 1rem .2rem $color_a;
-                                    transform: scale(1.1);
-
+                                    transform: scale(1.5);
                                 }
                             }
                         }
@@ -419,43 +436,7 @@ main {
                         }
                     }
 
-                    .gallery {
-                        .img-group {
-                            @include flex-center-row;
-                            // width: 100%;
-                            flex-wrap: wrap;
 
-
-
-
-
-                            .img-box {
-                                @include flex-center;
-                                width: 40rem;
-                                border: 2px solid $color_a;
-                                padding: 2rem;
-                                border-radius: 5px;
-                                margin-bottom: 2rem;
-
-
-                                img {
-                                    border-radius: 5px;
-                                    transition: 1s cubic-bezier(.06, .61, .22, .68);
-                                }
-                            }
-
-                            .img-box:hover {
-
-
-
-                                img {
-                                    box-shadow: 0 0 1rem .2rem $color_a;
-                                    transform: scale(1.1);
-
-                                }
-                            }
-                        }
-                    }
 
                     .text {
                         .text-in {

@@ -37,7 +37,7 @@ header {
             }
 
             .line {
-                animation: tr-x 1.5s cubic-bezier(.06, .61, .22, .68) 1 both;
+                animation: tr-x 1.5s  cubic-bezier(.06, .61, .22, .68) 1 both;
             }
 
             h1,
@@ -45,6 +45,7 @@ header {
                 padding: 1rem;
                 color: rgb(231, 231, 231);
                 text-align: center;
+
 
 
             }
@@ -134,11 +135,12 @@ header {
 @keyframes tr-up {
     from {
         transform: translateY(8rem);
-
+        opacity: 0;
     }
 
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 

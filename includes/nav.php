@@ -1,6 +1,7 @@
-<nav class="desktop">
+<nav class="desktop" id="nav_bar">
 <div class="hm-wrap">
         <div class="h-wrap">
+            <div class="h-line"></div>
             <div class="h-line"></div>
             <div class="h-line"></div>
         </div>

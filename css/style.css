@@ -11,6 +11,25 @@ html {
   font-family: 'Sarabun', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bd8e69;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: tomato;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd034;
+}
+
 .main-page-wrap {
   width: 100%;
   height: auto;
@@ -53,19 +72,21 @@ nav {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #c09775;
+  border-bottom: 1px solid rgba(255, 99, 71, 0.212);
   z-index: 100;
 }
 
 nav .ul-wrap {
   position: absolute;
-  top: -100vh;
+  top: -110vh;
   left: 0;
   width: 100%;
   height: 100vh;
   background-color: #c09775;
   -webkit-box-shadow: inset 0 0 10rem 0.1rem #f8e0b2;
           box-shadow: inset 0 0 10rem 0.1rem #f8e0b2;
+  -webkit-transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 nav .ul-wrap ul {
@@ -102,6 +123,10 @@ nav .ul-wrap ul li a {
   text-decoration: none;
 }
 
+nav .show-menu {
+  top: 0;
+}
+
 nav .hm-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,12 +142,15 @@ nav .hm-wrap {
   width: 60px;
   height: 60px;
   margin-right: 2rem;
+  z-index: 101;
 }
 
 nav .hm-wrap .h-wrap {
   position: relative;
   width: 70%;
   height: 70%;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 nav .hm-wrap .h-wrap .h-line {
@@ -134,20 +162,64 @@ nav .hm-wrap .h-wrap .h-line {
   background-color: white;
   -webkit-box-shadow: 0 0 0.3rem 0.1rem tomato;
           box-shadow: 0 0 0.3rem 0.1rem tomato;
+  -webkit-transition: 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
 nav .hm-wrap .h-wrap .h-line:nth-child(1) {
-  top: 40%;
+  top: 30%;
+  width: 30%;
 }
 
 nav .hm-wrap .h-wrap .h-line:nth-child(2) {
-  top: 60%;
+  top: 70%;
+  width: 50%;
+}
+
+nav .hm-wrap .h-wrap .h-line:nth-child(3) {
+  top: 50%;
+  width: 100%;
+}
+
+nav .hm-wrap .active-menu {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+nav .hm-wrap .active-menu .h-line:nth-child(1),
+nav .hm-wrap .active-menu .h-line:nth-child(2),
+nav .hm-wrap .active-menu .h-line:nth-child(3) {
+  width: 100%;
+  -webkit-box-shadow: 0 0 .3rem .1rem transparent;
+          box-shadow: 0 0 .3rem .1rem transparent;
+}
+
+nav .hm-wrap .active-menu .h-line:nth-child(1),
+nav .hm-wrap .active-menu .h-line:nth-child(2) {
+  top: 50%;
+}
+
+nav .hm-wrap .active-menu .h-line:nth-child(3) {
+  opacity: 0;
+}
+
+nav .hm-wrap .a-m-rotate .h-line:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .hm-wrap .a-m-rotate .h-line:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.bg-scrolled {
+  background-color: white;
 }
 
 @media (min-width: 1025px) {
   .desktop {
     background-color: rgba(124, 68, 0, 0.021);
-    border-bottom: 1px solid rgba(255, 99, 71, 0.212);
   }
   .desktop .ul-wrap {
     top: 0;
@@ -178,6 +250,12 @@ nav .hm-wrap .h-wrap .h-line:nth-child(2) {
   }
   .desktop .hm-wrap {
     display: none;
+  }
+  .bg-scrolled {
+    background-color: white;
+  }
+  .bg-scrolled .ul-wrap ul li a {
+    color: black;
   }
 }
 
@@ -311,10 +389,12 @@ header .front-page .cover .line {
   from {
     -webkit-transform: translateY(8rem);
             transform: translateY(8rem);
+    opacity: 0;
   }
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -322,10 +402,12 @@ header .front-page .cover .line {
   from {
     -webkit-transform: translateY(8rem);
             transform: translateY(8rem);
+    opacity: 0;
   }
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -405,6 +487,7 @@ main article section {
   height: 100%;
   -ms-scroll-snap-type: both mandatory;
       scroll-snap-type: both mandatory;
+  overflow: hidden;
 }
 
 main article section .content {
@@ -518,7 +601,6 @@ main article section .content .gallery .img-group {
           flex-direction: column;
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
 main article section .content .gallery .img-group .img-box {
@@ -540,6 +622,15 @@ main article section .content .text .text-in p {
   margin-bottom: 3rem;
 }
 
+main article section .content .text .text-in p .bigger {
+  font-size: calc(3vh + .5px);
+  font-family: 'Love Light', cursive;
+}
+
+main article section .content .text .text-in p .bigger .bold-color {
+  color: tomato;
+}
+
 main article section .content .line {
   width: 40%;
   height: .3rem;
@@ -555,9 +646,13 @@ main article section .h-8 {
   min-height: 80vh;
 }
 
-main article section .color-orange {
+main article section .color-a {
   background-color: tomato;
   color: white;
+}
+
+main article section .color-b {
+  background-color: rgba(235, 235, 235, 0.178);
 }
 
 @media (min-width: 769px) {
@@ -584,6 +679,9 @@ main article section .color-orange {
   }
   main article section .content .list ul .no-style {
     list-style: none;
+  }
+  main article section .content .gallery {
+    padding: 8rem;
   }
   main article section .content .gallery .img-group {
     display: -webkit-box;
@@ -642,6 +740,9 @@ main article section .color-orange {
   main article section .content .list ul .l-con:hover a[id=email] i {
     color: tomato;
   }
+  main article section .content .gallery {
+    width: 80%;
+  }
   main article section .content .gallery .img-group {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -670,21 +771,26 @@ main article section .color-orange {
         -ms-flex-align: center;
             align-items: center;
     width: 40rem;
-    border: 2px solid tomato;
+    border: 1px solid rgba(128, 128, 128, 0.555);
     padding: 2rem;
     border-radius: 5px;
     margin-bottom: 2rem;
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+    z-index: 2;
+    overflow: hidden;
   }
   main article section .content .gallery .img-group .img-box img {
     border-radius: 5px;
-    -webkit-transition: 1s cubic-bezier(0.06, 0.61, 0.22, 0.68);
-    transition: 1s cubic-bezier(0.06, 0.61, 0.22, 0.68);
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+  }
+  main article section .content .gallery .img-group .img-box:hover {
+    border-color: rgba(128, 128, 128, 0);
   }
   main article section .content .gallery .img-group .img-box:hover img {
-    -webkit-box-shadow: 0 0 1rem 0.2rem tomato;
-            box-shadow: 0 0 1rem 0.2rem tomato;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   main article section .content .text .text-in {
     max-width: 120rem;
@@ -720,50 +826,6 @@ main article section .color-orange {
   main article section .content .list ul .l-con:hover a[id=phone] i,
   main article section .content .list ul .l-con:hover a[id=email] i {
     color: tomato;
-  }
-  main article section .content .gallery .img-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  main article section .content .gallery .img-group .img-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 40rem;
-    border: 2px solid tomato;
-    padding: 2rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-  }
-  main article section .content .gallery .img-group .img-box img {
-    border-radius: 5px;
-    -webkit-transition: 1s cubic-bezier(0.06, 0.61, 0.22, 0.68);
-    transition: 1s cubic-bezier(0.06, 0.61, 0.22, 0.68);
-  }
-  main article section .content .gallery .img-group .img-box:hover img {
-    -webkit-box-shadow: 0 0 1rem 0.2rem tomato;
-            box-shadow: 0 0 1rem 0.2rem tomato;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
   }
   main article section .content .text .text-in p {
     font-size: 3vh;
