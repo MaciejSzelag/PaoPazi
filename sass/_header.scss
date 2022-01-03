@@ -1,6 +1,8 @@
 header {
     width: 100%;
     height: 100vh;
+    z-index: 1;
+    overflow: hidden;
 
 
 
@@ -19,8 +21,8 @@ header {
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url(../images/flower_1920.jpg);
-            background-position: center left;
+            background-image: url(../images/woman.jpg);
+            background-position: center top;
             background-size: cover;
             background-repeat: no-repeat;
             z-index: -1;
@@ -28,7 +30,8 @@ header {
 
         .cover {
             @include flex-center-jc-end-column;
-            background-color: rgba(124, 68, 0, 0.37);
+            // background-color: rgba(124, 68, 0, 0.37);
+            background-color: rgba(32, 32, 32, 0.603);
             padding-bottom: 6rem;
 
             h1,
@@ -37,7 +40,7 @@ header {
             }
 
             .line {
-                animation: tr-x 1.5s  cubic-bezier(.06, .61, .22, .68) 1 both;
+                animation: tr-x 1.5s cubic-bezier(.06, .61, .22, .68) 1 both;
             }
 
             h1,
@@ -72,6 +75,24 @@ header {
                 background-color: $color_a;
                 // cubic-bezier(.06, .61, .22, .68)
             }
+        }
+    }
+
+
+}
+
+.small-header {
+    height: 30vh;
+
+    .bg-absolute {
+        background-image: url(../images/flower_1920.jpg) !important;
+    }
+
+    .front-page {
+        .cover {
+            background-color: rgba(180, 122, 46, 0.555);
+
+            padding: 0;
         }
     }
 }
@@ -127,6 +148,21 @@ header {
                     height: 3px;
 
                 }
+            }
+        }
+    }
+
+    .small-header {
+        height: 50vh;
+
+        .front-page {
+            .bg-absolute {
+                background-position: center 32%;
+            }
+
+            .cover {
+                @include flex-center;
+                padding: 0;
             }
         }
     }

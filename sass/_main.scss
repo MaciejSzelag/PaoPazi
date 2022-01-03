@@ -16,17 +16,19 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgb(189, 142, 105);
+    background: rgb(129, 129, 129);
+    box-shadow: inset 2px 0 6px 1px rgb(117, 117, 117);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $color_a;
+    background: rgb(46, 46, 46);
+    box-shadow: inset 0 0 8px 1px rgb(170, 170, 170);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 208, 52);
+    box-shadow: inset 0 0 8px 1px $color_a;
 }
 
 .main-page-wrap {

@@ -2,7 +2,7 @@
     
 </footer>
 
-<script src="js/main.js"></script>
+<script src="<?php $fill_path; if(!empty($fill_path))echo $fill_path; ?>js/main.js"></script>
 
 </body>
 </html>
