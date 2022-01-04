@@ -1,0 +1,63 @@
+main {
+    article {
+
+        .o-mnie {
+            width: 100%;
+            min-height: 100vh;
+
+            header {
+                @include flex-center;
+                position: absolute;
+                width: 100%;
+                // min-height: 100vh;
+                background-image: url(../images/Galery/Other/Paulina-Kozdron.jpg);
+                background-position: 70% center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+                h1 {
+                    font-size: 7vh;
+                    padding: 3rem;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                    color: white;
+                    //font-family: 'Berkshire Swash', cursive;
+                    font-family: 'Love Light', cursive;
+                    // font-family: 'Sarabun', sans-serif;
+                    filter: drop-shadow(2px 2px 3px black);
+
+                    strong {
+                        font-size: calc(7vh + 2rem);
+                    }
+                }
+            }
+
+            .main-content {
+                position: relative;
+                margin-top: 100vh;
+                width: 100%;
+                min-height: 100vh;
+                background-color: white;
+                z-index: 1;
+
+
+
+                .text {
+                    padding: 6rem 0;
+
+
+
+
+
+                    p {
+                        font-size: 1.6rem;
+
+                        padding: 1.5rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

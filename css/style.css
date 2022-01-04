@@ -9,6 +9,7 @@
 html {
   font-size: 10px;
   font-family: 'Sarabun', sans-serif;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -355,11 +356,20 @@ header .front-page .cover .line {
   background-color: tomato;
 }
 
+.about-me {
+  height: 100vh;
+}
+
+.about-me .front-page .bg-absolute {
+  background-image: url(../images/Galery/Other/Paulina-Kozdron.jpg) !important;
+  background-position: 70% center;
+}
+
 .small-header {
   height: 30vh;
 }
 
-.small-header .bg-absolute {
+.small-header .front-page .bg-absolute {
   background-image: url(../images/flower_1920.jpg) !important;
 }
 
@@ -719,6 +729,8 @@ main article section .content table tr td {
           box-shadow: inset 0 0 0.8rem 0.1rem #646464;
   font-size: 1.2rem;
   text-transform: uppercase;
+  -webkit-transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 main article section .content table tr th:nth-child(even),
@@ -817,8 +829,16 @@ main article .section-active {
   main article section .content .list ul .l-con a {
     font-size: 2.5vh;
   }
+  main article section .content .list ul .l-con a i {
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+  }
   main article section .content .list ul .l-con:hover a {
     color: #bdbdbd;
+  }
+  main article section .content .list ul .l-con:hover a i {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   main article section .content .list ul .l-con:hover a[id=instagram] i {
     color: #fd3186;
@@ -889,6 +909,21 @@ main article .section-active {
   main article section .content .text .text-in p {
     font-size: 3vh;
   }
+  main article section .content table {
+    width: 100%;
+    max-width: 80rem;
+    padding: 1rem;
+  }
+  main article section .content table tr:hover td {
+    -webkit-box-shadow: inset 0 0 0.8rem 0.1rem tomato;
+            box-shadow: inset 0 0 0.8rem 0.1rem tomato;
+  }
+  main article section .content table tr:hover td:nth-child(even) {
+    -webkit-transform: scale(1.1) translateX(1.1rem);
+            transform: scale(1.1) translateX(1.1rem);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
   main article section .content .line {
     width: 20%;
   }
@@ -919,6 +954,193 @@ main article .section-active {
   }
   main article section .content .line {
     width: 20%;
+  }
+}
+
+main article .o-mnie {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main article .o-mnie header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  background-image: url(../images/Galery/Other/Paulina-Kozdron.jpg);
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main article .o-mnie header h1 {
+  font-size: 7vh;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: white;
+  font-family: 'Love Light', cursive;
+  -webkit-filter: drop-shadow(2px 2px 3px black);
+          filter: drop-shadow(2px 2px 3px black);
+}
+
+main article .o-mnie header h1 strong {
+  font-size: calc(7vh + 2rem);
+}
+
+main article .o-mnie .main-content {
+  position: relative;
+  margin-top: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  z-index: 1;
+}
+
+main article .o-mnie .main-content .text {
+  padding: 6rem 0;
+}
+
+main article .o-mnie .main-content .text p {
+  font-size: 1.6rem;
+  padding: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #252525;
+}
+
+footer .footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 2rem;
+}
+
+footer .footer-wrap .footer-box {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+footer .footer-wrap .footer-box ul li {
+  text-align: center;
+  list-style: none;
+  color: #646464;
+  font-size: 1.2rem;
+  padding: 1rem 1rem 0;
+}
+
+footer .footer-wrap .footer-box ul li a {
+  width: 100%;
+  height: 100%;
+  color: #646464;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+footer .footer-wrap .footer-box ul li i {
+  margin-right: 1rem;
+}
+
+footer .footer-wrap .footer-box ul .li-t {
+  position: relative;
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0;
+}
+
+footer .copyrights {
+  width: 100%;
+  padding: 2rem 0;
+  border-top: 1px solid #646464;
+}
+
+footer .copyrights p {
+  text-align: center;
+  color: #646464;
+  padding: 1rem 0;
+}
+
+footer .copyrights p a {
+  color: #646464;
+  text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  footer .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .footer-wrap .footer-box {
+    min-width: 30%;
+  }
+  footer .footer-wrap .footer-box ul li {
+    font-size: 1.5rem;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+  }
+  footer .footer-wrap .footer-box ul li a {
+    font-size: 1.5rem;
+    -webkit-transition: .6s linear;
+    transition: .6s linear;
+  }
+  footer .footer-wrap .footer-box ul li i {
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+  }
+  footer .footer-wrap .footer-box ul li[id=li]:hover {
+    color: white;
+  }
+  footer .footer-wrap .footer-box ul li[id=li]:hover a {
+    color: white;
+  }
+  footer .footer-wrap .footer-box ul li[id=li]:hover .fa-facebook-square {
+    color: #0066ff;
+  }
+  footer .footer-wrap .footer-box ul li[id=li]:hover .fa-instagram {
+    color: #ea00ff;
+  }
+  footer .footer-wrap .footer-box ul li[id=li]:hover i {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  footer .footer-wrap .footer-box ul .li-t {
+    font-size: 1.8rem;
+  }
+  footer .copyrights p {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

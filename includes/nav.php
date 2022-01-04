@@ -9,11 +9,11 @@
     <div class="ul-wrap">
   
         <ul>
-            <?php  if(!empty($home_page)) echo "<li><a href='index.php'>PaoPazi&Lash</a></li>" ;?>
+            <?php  if(!empty($home_page)) echo "<li><a href='index.php'>Strona domowa</a></li>" ;?>
             
-            <li><a href="">O Nas</a></li>
+            <li><a href="o-mnie.php">Poznaj mnie</a></li>
             <li><a href="cennik.php">Cennik</a></li>
-            <li><a href="">Kontakt</a></li>
+            <li><a href="#contact">Kontact</a></li>
         </ul>
     </div>
   

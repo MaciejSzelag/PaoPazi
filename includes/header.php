@@ -1,5 +1,5 @@
 <header id="section-top">
-    <section class="front-page">
+    <section class="front-page ">
         <div class="bg-absolute"></div>
         <div class="cover">
             <h1>PaoPazi <span>&</span> Lash</h1>

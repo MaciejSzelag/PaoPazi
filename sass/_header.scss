@@ -81,14 +81,27 @@ header {
 
 }
 
+.about-me {
+    height: 100vh;
+
+    .front-page {
+        .bg-absolute {
+            background-image: url(../images/Galery/Other/Paulina-Kozdron.jpg) !important;
+            background-position: 70% center;
+        }
+    }
+
+}
+
 .small-header {
     height: 30vh;
 
-    .bg-absolute {
-        background-image: url(../images/flower_1920.jpg) !important;
-    }
-
     .front-page {
+        .bg-absolute {
+            background-image: url(../images/flower_1920.jpg) !important;
+        }
+
+
         .cover {
             background-color: rgba(180, 122, 46, 0.555);
 

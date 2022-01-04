@@ -181,6 +181,7 @@ main {
                             box-shadow: inset 0 0 .8rem .1rem rgb(100, 100, 100);
                             font-size: 1.2rem;
                             text-transform: uppercase;
+                            transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
                         }
 
                         th:nth-child(even),
@@ -348,12 +349,20 @@ main {
                             .l-con {
                                 a {
                                     font-size: 2.5vh;
+
+                                    i {
+                                        transition: .3s linear;
+                                    }
                                 }
                             }
 
                             .l-con:hover {
                                 a {
-                                    color: rgb(189, 189, 189)
+                                    color: rgb(189, 189, 189);
+
+                                    i {
+                                        transform: rotate(-45deg);
+                                    }
                                 }
 
                                 a[id=instagram] {
@@ -430,6 +439,24 @@ main {
 
                             p {
                                 font-size: 3vh;
+                            }
+                        }
+                    }
+
+                    table {
+                        width: 100%;
+                        max-width: 80rem;
+                        padding: 1rem;
+
+                        tr:hover {
+                            td {
+                                box-shadow: inset 0 0 .8rem .1rem $color_a;
+                            }
+
+                            td:nth-child(even) {
+                                transform: scale(1.1) translateX(1.1rem);
+                                border-top-right-radius: 1rem;
+                                border-bottom-right-radius: 1rem;
                             }
                         }
                     }

@@ -9,11 +9,11 @@
                         <h1>Manicure & Pedicure</h1>
                         <div class="line"></div>
                         <div class="text">
-                        <div class="text-in">
-                                <p>
-                                Piękne dłonie oraz <strong>paznokcie</strong> są perfrkcyjną marką każdej kobiety i dlatego są synonimem elegancji oraz klasy, a także dodają pewności siebie. To samo dotyczy zadbanych stóp. Dlatego warto inwestować w obszerną regenerację. <span class="bigger">PaoPazi <span class="bold-color">&</span> Lash </span> rekomenduje klasyczny <strong>manicure</strong> oraz <strong>pedicure</strong> w szczególności że stanowią podstawę pielęgnacji stóp i dłoni. 
-                                </p>
-                        </div>
+                            <div class="text-in">
+                                    <p>
+                                    Piękne dłonie oraz <strong>paznokcie</strong> są perfrkcyjną marką każdej kobiety i dlatego są synonimem elegancji oraz klasy, a także dodają pewności siebie. To samo dotyczy zadbanych stóp. Dlatego warto inwestować w obszerną regenerację. <span class="bigger">PaoPazi <span class="bold-color">&</span> Lash </span> rekomenduje klasyczny <strong>manicure</strong> oraz <strong>pedicure</strong> w szczególności że stanowią podstawę pielęgnacji stóp i dłoni. 
+                                    </p>
+                            </div>
                         </div>
 
                     </div>
@@ -83,7 +83,7 @@
                     </div>
                 </section>
                 <section class="section">
-                    <div class="content h-8">
+                    <div class="content ">
                         <h1>Galeria rzęs</h1>
                         <div class="line"></div>
                         <h4><i>Moje otatnie rzęsy</i></h4>
@@ -148,23 +148,7 @@
 
                     </div>
                 </section>
-                <section class="section"> 
-                    <div class="content ">
-                        <h1>Kontakt</h1>
-                        <div class="line"></div>
-                        <div class="text">
-                        <div class="list ">
-                            <ul>
-                                <li class="no-style l-con"><a href="tel:+447877320658" id="phone"><i class="fas fa-mobile-alt"></i>+44 7877320658</a></li>
-                                <li class="no-style l-con"><a href="mailto:paopaziandlash@gmail.com" id="email"><i class="far fa-envelope"></i>paopaziandlash@gmail.com</a></li>
-                                <li class="no-style l-con"><a href="" id="instagram"><i class="fab fa-instagram"></i>Instagram</a></li>
-                                <li class="no-style l-con"><a href="https://www.facebook.com/PaoPazi-Lash-106971957863635" id="facebook"><i class="fab fa-facebook-square"></i>facebook</a></li>
-                            </ul>
-                        </div>
-                        </div>
-
-                    </div>
-                </section>
+                <?php include "includes/contact.php"; ?>
             </article>
         </main>
     </div>

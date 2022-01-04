@@ -1,0 +1,139 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(37, 37, 37);
+
+    .footer-wrap {
+        @include flex-center-column;
+        width: 100%;
+        height: 100%;
+        padding: 3rem 2rem;
+
+        .footer-box {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 3rem;
+
+            ul {
+
+
+                li {
+                    text-align: center;
+                    list-style: none;
+                    color: $color-b;
+                    font-size: 1.2rem;
+                    padding: 1rem 1rem 0;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+                        color: $color-b;
+                        font-size: 1.2rem;
+                        text-decoration: none;
+                    }
+
+                    i {
+                        margin-right: 1rem;
+                    }
+
+                }
+
+                .li-t {
+                    position: relative;
+                    font-size: 1.3rem;
+                    margin: 1.5rem 0 0;
+
+                }
+
+                // .li-t
+            }
+
+        }
+    }
+
+    .copyrights {
+        width: 100%;
+        padding: 2rem 0;
+        border-top: 1px solid $color-b;
+
+        p {
+            text-align: center;
+            color: $color-b;
+            padding: 1rem 0;
+
+            a {
+                color: $color-b;
+                text-decoration: none;
+                ;
+            }
+        }
+    }
+}
+
+@media (min-width:900px) {
+    footer {
+
+
+        .footer-wrap {
+            @include flex-center-row;
+
+
+            .footer-box {
+                min-width: 30%;
+
+                ul {
+                    li {
+                        font-size: 1.5rem;
+                        transition: .3s linear;
+
+                        a {
+                            font-size: 1.5rem;
+                            transition: .6s linear;
+                        }
+
+                        i {
+                            transition: .3s linear;
+                        }
+                    }
+
+                    li[id=li]:hover {
+                        color: white;
+
+                        a {
+                            color: white;
+                        }
+
+                        .fa-facebook-square {
+                            color: rgb(0, 102, 255);
+                        }
+
+                        .fa-instagram {
+                            color: rgb(234, 0, 255);
+                        }
+
+                        i {
+                            transform: rotate(-45deg);
+                        }
+
+                    }
+
+                    .li-t {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+
+        }
+
+        .copyrights {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+
+    }
+
+}
